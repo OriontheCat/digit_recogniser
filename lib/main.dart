@@ -114,7 +114,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         context: context,
                         builder: (context) {
                           return Dialog(
-                            child: Text(displayString),
+                            child: Text(
+                              displayString,
+                              style: Theme.of(context).textTheme.title,
+                            ),
                           );
                         });
                   },
