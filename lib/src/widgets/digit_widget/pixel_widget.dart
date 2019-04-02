@@ -35,6 +35,12 @@ class _PixelWidgetState extends State<PixelWidget> {
           builder: (BuildContext context, PixelState state) {
             return GestureDetector(
               onTap: () {
+                _pixelBloc.dispatch(SetValue(1));
+              },
+              onDoubleTap: () {
+                _pixelBloc.dispatch(SetValue(0));
+              },
+              onLongPress: () {
                 showDialog(
                   context: context,
                   builder: (context) {
@@ -58,8 +64,11 @@ class _PixelWidgetState extends State<PixelWidget> {
                   },
                 );
               },
-              child: Container(
-                color: valueToColor(state.value),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(2.0),
+                child: Container(
+                  color: valueToColor(state.value),
+                ),
               ),
             );
           },

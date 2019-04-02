@@ -1,10 +1,12 @@
 main(List<String> args) {
   String digitString = '''
  sss 
-s    
-ssss 
 s   s
- sss ''';
+s   s
+ sss 
+   s 
+  s  
+ s   ''';
   List<String> rows = digitString.split('\n');
   List<List<double>> digit = [];
   rows.forEach((String row) {

@@ -12,6 +12,7 @@ dependencies:
   bloc: ^0.11.1
   flutter_bloc: ^0.9.1
   equatable: ^0.2.3
+  numberpicker: ^1.0.0
 
   cupertino_icons: ^0.1.2
 
